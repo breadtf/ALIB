@@ -1,6 +1,10 @@
 # ALIB, A multipurpose PHP Library
 ALIB is a PHP library designed to make using PHP easier and faster.
 
+### ⚠️ WARNING
+ALIB is currently pre-pre-pre-pre alpha and is definetly not production ready.
+Use at your own risk.
+
 ALIB includes many common functions often used by PHP programmers, such as
 a JSON append function, and a tag formatting function
 
