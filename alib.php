@@ -3,7 +3,7 @@
 // 
 // ALIB - ALib Isnt Bad
 // Multipurpose PHP Library
-// ALIB is liscenced under MIT
+// ALIB is licensed under MIT
 // https://github.com/breadteleporter/alib
 // 
 
