@@ -64,7 +64,6 @@ if ($ALIB->getJSONAndDecode("test/getjson-test.json")[0]["key1"] == "value1"){
 // Tag formatting test
 // 
 
-
 if ($ALIB->formatInTag("Sample text", "p") == "<p>Sample text</p>"){
     echo "Tag Format \033[32mPASS\033[0m\n";
 } else{

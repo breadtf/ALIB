@@ -9,7 +9,7 @@
 
 class alib {
 
-    const version = "0.0.1";
+    const version = "0.0.2";
 
     // Append JSON data to a file
     function appendJSON($array, $file, $pretty=true){
@@ -44,5 +44,15 @@ class alib {
     // Get JSON data from a remote server or file
     function getJSONAndDecode($location){
         return json_decode(file_get_contents($location), true);
+    }
+
+    // Upload a file into a directory
+    function uploadToDir($file, $directory){
+        $uploadfile = $directory . basename($file['name']);
+        if (move_uploaded_file($file['tmp_name'], $uploadfile)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
