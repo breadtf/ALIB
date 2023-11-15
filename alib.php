@@ -47,8 +47,19 @@ class alib {
     }
 
     // Upload a file into a directory
-    function uploadToDir($file, $directory){
-        $uploadfile = $directory . basename($file['name']);
+    function uploadToDir($file, $directory, $discardname=false, $newname=""){
+        if ($discardname == false){
+            $uploadfile = $directory . basename($file['name']);
+        } else{
+            $ext = end((explode(".", $file["name"])));
+            if ($newname == ""){
+                
+                $uploadfile = $directory . uniqid() . "." . $ext;
+            } else{
+                $uploadfile = $directory . $newname . "." . $ext;
+            }
+
+        }
         if (move_uploaded_file($file['tmp_name'], $uploadfile)) {
             return true;
         } else {
